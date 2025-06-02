@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review Sentiment Analyzer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>    
+    <div class="container">
+        <div class="glass-panel">
+            <h1>Movie Review Sentiment Analyzer</h1>
+            <p class="description">Enter a movie review below and discover its sentiment score.</p>
+            
+            <textarea id="review-text" placeholder="Type or paste your movie review here..."></textarea>
+            <button id="analyze-btn">Analyze Sentiment</button>
+            
+            <div class="result" id="result-container">
+                <h3>Analysis Results</h3>
+                <div id="sentiment-result">Your review seems <span id="sentiment-text">neutral</span>.</div>
+                
+                <div class="sentiment-score">
+                    <span>Confidence</span>
+                    <div class="meter">
+                        <div class="meter-fill" id="meter-fill"></div>
+                    </div>
+                </div>
+                <div class="meter-label">Confidence: <span id="score-value">0</span></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
